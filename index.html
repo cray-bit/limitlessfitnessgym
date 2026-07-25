@@ -13,7 +13,6 @@
   <meta property="og:title" content="Limitless Fitness | Transform Your Life">
   <meta property="og:description" content="Join Limitless Fitness for expert training, diverse fitness classes, and flexible membership options.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://YOUR-GITHUB-PAGES-URL.github.io/REPO-NAME/">
   <meta property="og:image" content="images/facility.jpg">
 
   <!-- Twitter -->
@@ -124,16 +123,30 @@
         <h3>Join Limitless Fitness Today!</h3>
         <p>Fill out the form below to kickstart your fitness journey:</p>
 <!--add accessibility to the form-->
-        Full Name
-        Email Address
-        Phone Number
-        Membership Type
-          Select a Membership Option
-          Monthly Membership
-          Annual Membership
-          Family & Group Plans
-        Tell us about your fitness goals:
-        Submit
+        <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+
+          <label for="membership">Membership Type</label>
+          <select id="membership" name="membership" required>
+            <option value="">Select a Membership Option</option>
+            <option value="monthly">Monthly Membership</option>
+            <option value="annual">Annual Membership</option>
+            <option value="family">Family &amp; Group Plans</option>
+          </select>
+
+          <label for="goals">Tell us about your fitness goals:</label>
+          <textarea id="goals" name="goals" rows="5"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
       </section>
     </section>
   </main>
